@@ -1,3 +1,10 @@
+/**
+ * This is the firmware for the Switchee Eurorack module. It is designed around a ATSAMD10. The 
+ * MCU looks for trigger and reset inputs, and then decides how to change the output routing of 
+ * the four analog signal switchers (DG447). A lot of this code is management of the hardware
+ * user interface. The mode is saved to flash after a long enough delay to not exceed the flash
+ * lifetime.
+*/
 #include <atmel_start.h>
 
 enum 
